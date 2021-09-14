@@ -13,24 +13,30 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
   <link rel="stylesheet" href="/static/css/style.css">
-<title>별그램 - 회원가입</title>
+<title>인별 - 회원가입</title>
 </head>
 <body>
 	<div id="wrap">
-		<section class="content  d-flex justify-content-center">
+		<section style="padding-top: 200px; padding-bottom: 200px" class="content  d-flex justify-content-center">
 			<div class="signUp-box d-flex justify-content-center align-items-center">
 				<div class="w-100 ">
-					<h1 class="text-center">회원가입</h1>
-					<input type="text" class="form-control mt-3" id="loginIdInput" placeholder="아이디">
-					<input type="password" class="form-control mt-3" id="passwordInput" placeholder="패스워드">
-					<input type="password" class="form-control mt-3" id="passwordConfirmInput" placeholder="패스워드 확인">
-					<small class="text-danger d-none " id="errorPassword">비밀번호가 일치하지 않습니다.</small>
-					<input type="text" class="form-control mt-3" id="nameInput" placeholder="이름">
-					<input type="text" class="form-control mt-3" id="emailInput" placeholder="이메일">
-					<button id="signUpBtn" type="submit" class="btn btn-info btn-block mt-3">회원가입</button>
+					<form id="signUpForm">
+						<h1 class="text-center">회원가입</h1>
+						<div class="d-flex  mt-3">
+							<input type="text" id="loginIdInput" class="form-control" placeholder="아이디">
+							<button type="button" class="btn btn-info btn-sm" id="isDuplicateBtn">중복확인</button>
+						</div>
+						<input type="password" class="form-control mt-3" id="passwordInput" placeholder="패스워드">
+						<input type="password" class="form-control mt-3" id="passwordConfirmInput" placeholder="패스워드 확인">
+						<small class="text-danger d-none " id="errorPassword">비밀번호가 일치하지 않습니다.</small>
+						<input type="text" class="form-control mt-3" id="nameInput" placeholder="이름">
+						<input type="text" class="form-control mt-3" id="emailInput" placeholder="이메일">
+						<button id="signUpBtn" type="submit" class="btn btn-primary btn-block mt-3">회원가입</button>
+					</form>
 				</div>
 			</div>
 		</section>
+		<c:import url="/WEB-INF/jsp/include/footer.jsp"/>
 	</div>
 	
 	<script>
