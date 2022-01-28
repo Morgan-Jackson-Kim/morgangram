@@ -1,5 +1,6 @@
 package com.morganj.morgandram.user;
 
+import java.util.HashMap;
 import java.util.Map;
 
 import org.springframework.web.bind.annotation.PostMapping;
@@ -19,7 +20,7 @@ public class UserRestController {
 			, @RequestParam("email") String email
 			){
 		Map<String, String> result = new HashMap<>();
-		int count = userBO.signUp(loginId, password, name, email);
+		int count = 0;
 		
 		if(count == 1) {
 			result.put("result", "success");
